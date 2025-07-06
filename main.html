@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bas Tu Hi Tu 🌸</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: radial-gradient(circle at top, #0f172a, #1e293b);
+      font-family: 'Segoe UI', sans-serif;
+      color: #e0f2fe;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      margin-top: 50px;
+      font-size: 3em;
+      color: #60a5fa;
+      text-shadow: 0 0 20px #93c5fd;
+    }
+
+    p {
+      max-width: 700px;
+      margin: 40px auto;
+      font-size: 1.3em;
+      line-height: 1.8em;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(4px);
+    }
+
+    .floating {
+      position: fixed;
+      pointer-events: none;
+      z-index: 1;
+      opacity: 0.7;
+      animation: float 10s linear infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(-100px) rotate(0deg); }
+      100% { transform: translateY(100vh) rotate(360deg); }
+    }
+
+    .footer {
+      margin-top: 50px;
+      font-size: 1em;
+      color: #64748b;
+      padding-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Bas Tu Hi Tu 🌟</h1>
+
+  <p>
+    kade kade ta lgda hai tu meri jindagi ch dost nahi meri maa hai 🤣 jdo dekho khiji jayegi haar gll te bndri jehi motto . jdo dekho har gll ta putha meaning hi kadna hunda tu kaade ajj tak changa kam kreya hai koi ni college aa dssu tenu mai bndri 🐵
+  </p>
+
+  <div class="footer">~ Made just for you ~</div>
+
+  <script>
+    const images = [
+      "https://cdn-icons-png.flaticon.com/512/616/616408.png", // pink flower
+      "https://cdn-icons-png.flaticon.com/512/833/833472.png"  // heart
+    ];
+
+    for (let i = 0; i < 25; i++) {
+      const el = document.createElement('img');
+      el.src = images[Math.floor(Math.random() * images.length)];
+      el.className = 'floating';
+      el.style.left = Math.random() * 100 + 'vw';
+      el.style.top = '-' + (Math.random() * 300) + 'px';
+      el.style.width = `${20 + Math.random() * 20}px`;
+      el.style.height = 'auto';
+      el.style.animationDuration = `${6 + Math.random() * 5}s`;
+      document.body.appendChild(el);
+    }
+  </script>
+
+</body>
+</html>
